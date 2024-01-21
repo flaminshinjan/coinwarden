@@ -1,3 +1,4 @@
+import 'package:coinwarden/tutorials/t1.dart';
 import 'package:coinwarden/widgets/dashb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -122,11 +123,11 @@ class TutorialPage extends StatelessWidget {
             Expanded(
               child: ListView(children: [
                 SizedBox(height: 15),
-                ImageButton2(onTap: () {}, imagepath: "assets/introb.png"),
+                ImageButton2(onTap: () {}, imagepath: "assets/introb.png", width: 309, height: 69),
                 SizedBox(height: 15),
-                ImageButton2(onTap: () {}, imagepath: "assets/bcb.png"),
+                ImageButton2(onTap: () {}, imagepath: "assets/bcb.png", width: 309, height: 69),
                 SizedBox(height: 15),
-                ImageButton2(onTap: () {}, imagepath: "assets/bb.png"),
+                ImageButton2(onTap: () {}, imagepath: "assets/bb.png", width: 309, height: 69),
               ]),
             ),
           ],
@@ -136,8 +137,10 @@ class TutorialPage extends StatelessWidget {
         text: 'Swipe to unlock',
         iconData: Icons.chevron_right,
         onPressed: () {
-          // Your on pressed function
-          print('Button Pressed');
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const T1Page()),
+          );
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation

@@ -26,8 +26,11 @@ class ImageButton extends StatelessWidget {
 class ImageButton2 extends StatelessWidget {
   final VoidCallback onTap;
   final String imagepath;
+  final double width;
+  final double height;
 
-  const ImageButton2({Key? key, required this.onTap, required this.imagepath})
+
+  const ImageButton2({Key? key, required this.onTap, required this.imagepath, required this.width, required this.height})
       : super(key: key);
 
   @override
@@ -35,8 +38,8 @@ class ImageButton2 extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 309,
-        height: 69,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
         ),
