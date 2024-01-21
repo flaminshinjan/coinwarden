@@ -156,9 +156,11 @@ class SignupPage extends StatelessWidget {
                 children: [],
               ),
             ),
-            const Spacer() ,
+            const Spacer(),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/dashboard');
+              },
               child: Image.asset(
                 'assets/CreateAcc.png',
                 width: 370,
