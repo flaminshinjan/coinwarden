@@ -5,7 +5,7 @@ Coin Warden: Your gateway to blockchain mastery. Learn Bitcoin, Solana, and more
 # App_UI 📱
  ![coinw](https://github.com/flaminshinjan/coinwarden/assets/116586681/f3f42dc9-4395-4413-a8b6-82c53cbf10d3)
 
-# CoinWarden MADE WITH 💙 and 
+# CoinWarden MADE WITH 💙
 
 [![Flutter](https://img.shields.io/badge/Flutter-2.0-blue.svg?logo=flutter&logoColor=white&color=02569B)](https://flutter.dev)
 
