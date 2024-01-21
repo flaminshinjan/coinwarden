@@ -141,7 +141,9 @@ class LoginPage extends StatelessWidget {
             ),
             const Spacer(),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/dashboard');
+              },
               child: Image.asset(
                 'assets/Login.png',
                 width: 370,
