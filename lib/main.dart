@@ -2,6 +2,7 @@ import 'package:coinwarden/auth/intro_page.dart';
 import 'package:coinwarden/auth/login_page.dart';
 import 'package:coinwarden/auth/signup_page.dart';
 import 'package:coinwarden/dashboard/dashboard.dart';
+import 'package:coinwarden/dashboard/tutorial.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/signup': (context) => const SignupPage(),
         '/dashboard': (context) => const DashboardPage(),
+        '/tutorial': (context) => const TutorialPage(),
       }
     );
   }

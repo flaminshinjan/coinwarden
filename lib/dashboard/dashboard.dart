@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:coinwarden/widgets/contentblock.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -13,6 +14,7 @@ class DashboardPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         elevation: 0,
+        toolbarHeight: 100,
         title: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -24,7 +26,8 @@ class DashboardPage extends StatelessWidget {
                     Text(
                       'Hello, Shinjan!',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
+                        fontSize: 22.5,
+                        fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
                     ),
@@ -32,7 +35,7 @@ class DashboardPage extends StatelessWidget {
                       children: [
                         const Icon(
                           Icons.workspace_premium_rounded,
-                          color: Color(0xFFE0D56E),
+                          color: Color.fromARGB(255, 227, 132, 64),
                         ),
                         const SizedBox(
                           width: 10,
@@ -40,7 +43,8 @@ class DashboardPage extends StatelessWidget {
                         Text(
                           'Basic Member',
                           style: GoogleFonts.poppins(
-                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
                             color: Colors.white,
                           ),
                         ),
@@ -76,143 +80,88 @@ class DashboardPage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text(
-              'Let\'s Learn New Blocks!',
-              style: GoogleFonts.poppins(
-                fontSize: 40,
-                color: Colors.white,
-                height: 1.0,
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Text(
+                "Let's Learn New Blocks!",
+                style: GoogleFonts.poppins(
+                  fontSize: 42,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
               ),
             ),
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF1C1C1C),
-                      borderRadius: BorderRadius.circular(50),
+            SizedBox(height: 20),
+            // Navigation bar (Tab-like structure)
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  MaterialButton(
+                    onPressed: () {},
+                    color: Color.fromARGB(255, 219, 115, 71),
+                    textColor: Colors.white,
+                    child: Text('Blockchain'),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
                     ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Blockchain',
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
+                  ),
+                  MaterialButton(
+                    onPressed: () {},
+                    color: const Color.fromARGB(255, 42, 41, 40),
+                    textColor: Colors.white,
+                    child: Text(
+                      'Bitcoins \$',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
                       ),
                     ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
                   ),
-                ),
-                Container(
-                  height: 50,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF1C1C1C),
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Center(
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Bitcoin',
-                        style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          color: Colors.white,
-                        ),
+                  MaterialButton(
+                    onPressed: () {},
+                    color: const Color.fromARGB(255, 42, 41, 40),
+                    textColor: Colors.white,
+                    child: Text(
+                      'Web3 Dev',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
                       ),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF1C1C1C),
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Web3 Developer',
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF1C1C1C),
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: Center(
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Solana',
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  // First block
+                  ContentBlock(
+                    title: 'Illustration with Blockchain',
+                    backgroundImage:
+                        'assets/illustration1.png', // replace with your asset
+                  ),
 
-          // idhar se code karna start kario 
-          SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: ListView(
-              children: [
-                SvgPicture.asset(
-                  'assets/block1.svg',
-                  fit: BoxFit.cover,
-                  width: 100,
-                  height: 300,
-                ),
-                SvgPicture.asset(
-                  'assets/block2.svg',
-                  fit: BoxFit.cover,
-                  width: 100,
-                  height: 300,
-                ),
-              ],
+                  ContentBlock(
+                      title: "Learn about Hash, Blocks!",
+                      backgroundImage: 'assets/illustration2.png'),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
